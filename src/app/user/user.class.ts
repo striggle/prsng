@@ -11,6 +11,7 @@ export class User {
 
     constructor() {
         this.id = 0;
+        this.password = 'password';
         this.reviewer = false;
         this.admin = false;
     }
