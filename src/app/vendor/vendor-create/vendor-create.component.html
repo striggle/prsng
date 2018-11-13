@@ -1,6 +1,6 @@
 <div class="component">
   <div>
-    <span class="page-title">Vendor Edit</span>
+    <span class="page-title">Vendor Create</span>
   </div>
 
   <div class="container form" *ngIf="vendor">
@@ -57,11 +57,11 @@
       <label class="col-form-label col-sm-2">State:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="vendor.state" class="form-control" type="text" name="state"
-          #state="ngModel" required minlength="8">
+          #state="ngModel" required minlength="2">
       </div>
       <div *ngIf="state.invalid && state.touched" class="col-form-label col-sm-2 text-danger">
         <label *ngIf="state?.errors.required">Required</label>
-        <label *ngIf="state?.errors.minlength">8 chars min</label>
+        <label *ngIf="state?.errors.minlength">2 chars min</label>
       </div>
     </div>
 
@@ -69,11 +69,11 @@
       <label class="col-form-label col-sm-2">Zip:</label>
       <div class="col-sm-8">
         <input [(ngModel)]="vendor.zip" class="form-control" type="text" name="zip"
-          #zip="ngModel" required minlength="8">
+          #zip="ngModel" required minlength="5">
       </div>
       <div *ngIf="zip.invalid && zip.touched" class="col-form-label col-sm-2 text-danger">
         <label *ngIf="zip?.errors.required">Required</label>
-        <label *ngIf="zip?.errors.minlength">8 chars min</label>
+        <label *ngIf="zip?.errors.minlength">5 chars min</label>
       </div>
     </div>
         

@@ -19,11 +19,19 @@ import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.comp
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 import { BoolDisplayPipe } from './pipes/bool-display.pipe';
 import { SortUsersPipe } from './pipes/sort-users.pipe';
-import { ProductComponent } from './product/product/product.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestLinesComponent } from './request/request-lines/request-lines.component';
+import { LinesListComponent } from './lines/lines-list/lines-list.component';
+import { LinesCreateComponent } from './lines/lines-create/lines-create.component';
+import { LinesEditComponent } from './lines/lines-edit/lines-edit.component';
+import { LinesDetailComponent } from './lines/lines-detail/lines-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,11 +49,19 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     VendorEditComponent,
     BoolDisplayPipe,
     SortUsersPipe,
-    ProductComponent,
     ProductCreateComponent,
     ProductDetailComponent,
     ProductEditComponent,
-    ProductListComponent
+    ProductListComponent,
+    RequestCreateComponent,
+    RequestDetailComponent,
+    RequestEditComponent,
+    RequestListComponent,
+    RequestLinesComponent,
+    LinesListComponent,
+    LinesCreateComponent,
+    LinesEditComponent,
+    LinesDetailComponent,
   ],
   imports: [
     BrowserModule,

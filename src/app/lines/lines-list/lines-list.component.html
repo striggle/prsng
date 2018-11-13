@@ -1,0 +1,36 @@
+<div>
+  <div>
+  <span>Request Line Items</span>
+  | <a *ngIf="request" routerLink='/lines/create/{{ request.id }}'>Create New</a>
+  </div>
+  <div>
+    <h1 class='centered'>
+      <span>Request</span>
+    </h1>
+    <table class="table table-sm" *ngIf='request'>
+        <thead>
+          <tr><td>User</td><td>Description</td><td>Date Needed</td><td>Total</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>{{ request.user.firstName }} {{ request.user.lastName }}</td><td>{{ request.description }}</td><td>{{ request.dateNeeded | date }}</td><td>{{ request.total | currency }}</td></tr>
+        </tbody>
+    </table>
+    <h1 class='centered'>
+        <span>Line Items</span>
+    </h1>
+    <table class="table table-sm">
+      <thead>
+        <tr><td>Product</td><td>Quantity</td><td>Price</td><td>Action</td></tr>
+      </thead>
+      <tbody *ngIf='lines'>
+        <tr *ngFor='let line of lines'>
+          <td>{{ lines.product.name }}</td><td>{{ lines.quantity }}</td><td>{{ lines.product.price }}</td>
+          <td>
+            <a routerLink='/lines/detail/{{ lines.id }}'>Detail</a>
+          | <a routerLink='/lines/edit/{{ lines.id }}'>Edit</a>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
